@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.10">
   <POU Name="MAIN" Id="{59ebf7a5-a622-4e8e-b8cd-d8e3d4cc7dfa}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR		
@@ -28,6 +28,8 @@ END_VAR
       <ST><![CDATA[
 risingEdgeSignalRead(CLK := xStartRead);
 risingEdgeSignalWrite(CLK := xStartWrite);
+
+TEEEEESSTTTTTTTTTTTTT
 
 
 structSick.Selection.AutoDeSelect := TRUE;
@@ -85,6 +87,8 @@ fbDemoAcyclic(
       <LineId Id="38" Count="0" />
       <LineId Id="24" Count="0" />
       <LineId Id="39" Count="0" />
+      <LineId Id="107" Count="0" />
+      <LineId Id="106" Count="0" />
       <LineId Id="43" Count="0" />
       <LineId Id="40" Count="2" />
       <LineId Id="44" Count="1" />
