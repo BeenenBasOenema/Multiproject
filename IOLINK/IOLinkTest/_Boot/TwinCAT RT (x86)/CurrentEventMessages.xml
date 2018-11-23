@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcEventSources Version="2"><Source><Name>EPP6228 (IO Link Master)</Name><GUID>{28111931-0002-0000-494B-776416001000}</GUID><Property><Name>DisplayTxtId</Name><Value>true</Value></Property><Event><Id>1</Id><Message LcId="1031">IO-Link Master Port {0}:  Eventqualifier = 0x{1,X} {2}</Message><Message LcId="1033">IO-Link Master Port {0}:  Eventqualifier = 0x{1,X} {2}</Message></Event></Source></TcEventSources>

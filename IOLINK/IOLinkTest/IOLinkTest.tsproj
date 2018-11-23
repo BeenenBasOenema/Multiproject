@@ -1,0 +1,4177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.25">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000008}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BYTE</Name>
+			<BitSize>8</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000004}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..3] OF BIT</Name>
+			<BitSize>4</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<BitSize>2</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424de6000000000000007600000028000000100000000e000000010004000000000070000000c30e0000c30e000010000000100000000000ff00ff00ff00ff000000ffff000000ff000000ffff0000008000800080008000000080800000008000000080800080808000c0c0c000ffffff0000000000111111111111111100ffffffffffffff00fffffffffff00ffffffffffffff00ffff00fff00fffffffff00fff00fffffffffffffffffff44f00fffffffffff44f00ffffffffffffffdddddd1111111111dddddd1111111111dddddd1111111111dddddd1111111111dddddd1111111111</ImageData>
+		<ImageData Id="1001">424dbe000000000000004e00000028000000100000000e000000010004000000000070000000c30e0000c30e00000600000006000000000000000000ff00ff00ff00808080000080ff0000ff000022222222222222220000000000000000030303030000011005050505000001100000000000000000000000000000000003030303000001100505050500000110000000000000000044444422222222224444442222222222444444222222222244444422222222224444442222222222</ImageData>
+		<ImageData Id="1002">424dd6020000000000003600000028000000100000000e0000000100180000000000a002000000000000000000000000000000000000ffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffffffffffffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffff171a1f171a1fffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffffffffff171a1f171a1fffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffff171a1fffffffffffff171a1f171a1fffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffff171a1f171a1f171a1f171a1fffffffffffff171a1fffffffffffff171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1fffffff171a1fffffffffffff171a1fffffff171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1fffffffffffff171a1f171a1fffffff171a1f171a1f171a1fffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffff171a1fffffffffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffff171a1f171a1fffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffffffffffffffff171a1f171a1fffffffffffff171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1f171a1f171a1f171a1f171a1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff171a1f171a1f171a1f171a1fffffffffffffffffffffffffffffffffffff</ImageData>
+	</ImageDatas>
+	<Project ProjectGUID="{B7EB5494-7B52-4CFA-A655-4009EDB7CD6F}" TargetNetId="10.25.60.57.1.1" ShowHideConfigurations="#x306">
+		<System>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{2CF5C062-6034-459B-9140-D653BE8F071A}" Name="PLC1" PrjFilePath="PLC1\PLC1.plcproj" TmcFilePath="PLC1\PLC1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC1\PLC1.tmc">
+					<Name>PLC1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.startdata</Name>
+							<Type>UINT</Type>
+						</Var>
+					</Vars>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+		<Io>
+			<Device DevType="111" DevFlags="#x0003" AmsPort="28674" AmsNetId="10.25.60.57.3.1" RemoteName="Device 2 (EtherCAT)" Id="2">
+				<Name>Device 2 (EtherCAT)</Name>
+				<AddressInfo>
+					<Pnp>
+						<DeviceDesc>ETHERCAT (X110) (TwinCAT-Intel PCI Ethernet Adapter</DeviceDesc>
+						<DeviceName>\DEVICE\{25125C72-90D4-4001-A04B-07031C438FEF}</DeviceName>
+						<DeviceData>000105194ce3</DeviceData>
+					</Pnp>
+				</AddressInfo>
+				<Image Id="1" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Box BoxType="9099" Id="1">
+					<Name>Box 1 (EPP1322-0001)</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT SlaveType="1" PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x647618a9" RevisionNo="#x00110001" RepeatSupport="true" PortPhys="4369" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP1322-0001 3 port EtherCAT P gateway" Desc="EPP1322-0001" PortABoxInfo="#x00ffffff">
+						<EtherCATp>
+							<Device>
+								<Us PowerSupply="true" DevCurrent="0.1"/>
+								<Up PowerSupply="true"/>
+							</Device>
+							<Port/>
+							<Port>
+								<Us PowerSupply="true" Resistance="0.108"/>
+								<Up PowerSupply="true" Resistance="0.108"/>
+							</Port>
+							<Port>
+								<Us PowerSupply="true" Resistance="0.108"/>
+								<Up PowerSupply="true" Resistance="0.108"/>
+							</Port>
+							<Port>
+								<Us PowerSupply="true" Resistance="0.108"/>
+								<Up PowerSupply="true" Resistance="0.108"/>
+							</Port>
+							<PowerSupply>
+								<Us MaxCurrent="3"/>
+								<Up MaxCurrent="3"/>
+							</PowerSupply>
+						</EtherCATp>
+					</EtherCAT>
+				</Box>
+				<Box BoxType="9099" BoxFlags="#x00000020" Id="2">
+					<Name>Box 2 (EPP6228-0022)</Name>
+					<ImageId>1001</ImageId>
+					<Xml>
+						<Port>
+							<FileName>SICK-WF-A00-20161116-IODD1.1.xml</FileName>
+							<VendorName>SICK AG</VendorName>
+							<VendorLogo>C:\TwinCAT\3.1\Config\Io\IOLink\SICK-logo.png</VendorLogo>
+							<DeviceName>WFL30-40B41CA00</DeviceName>
+							<DeviceIcon>C:\TwinCAT\3.1\Config\Io\IOLink\SICK-WFL30-60_48_48-icon.png</DeviceIcon>
+							<DeviceSymbol>C:\TwinCAT\3.1\Config\Io\IOLink\SICK-WFL30-60_160_160-pic.png</DeviceSymbol>
+							<DeviceFamilyName>Fork sensors</DeviceFamilyName>
+							<DeviceText>WFL30-40B41CA00</DeviceText>
+							<Flags>0x00600717</Flags>
+							<Features>0x00000021</Features>
+							<DirectParameter>008000AE0000001A000011011750000000000000</DirectParameter>
+							<Parameter>
+								<Name>Direct Parameters 1</Name>
+								<ObjId>V_DirectParameters_1</ObjId>
+								<Index>0x0</Index>
+								<ByteLenth>16</ByteLenth>
+								<Items>
+									<Name>Reserved</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>120</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Master Cycle Time</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>112</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Min Cycle Time</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>104</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>M-Sequence Capability</Name>
+									<Subindex>0x4</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>96</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>IO-Link Version ID</Name>
+									<Subindex>0x5</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>88</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Process Data Input Length</Name>
+									<Subindex>0x6</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>80</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Process Data Output Length</Name>
+									<Subindex>0x7</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>72</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Vendor ID 1</Name>
+									<Subindex>0x8</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>64</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Vendor ID 2</Name>
+									<Subindex>0x9</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>56</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device ID 1</Name>
+									<Subindex>0xa</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>48</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device ID 2</Name>
+									<Subindex>0xb</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>40</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device ID 3</Name>
+									<Subindex>0xc</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>32</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Reserved</Name>
+									<Subindex>0xd</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>24</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Reserved</Name>
+									<Subindex>0xe</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>16</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Reserved</Name>
+									<Subindex>0xf</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>8</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>System Command</Name>
+									<Subindex>0x10</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>63</upperValue>
+										<Text>Reserved</Text>
+									</Ranges>
+									<Ranges>
+										<lowerValue>131</lowerValue>
+										<upperValue>159</upperValue>
+										<Text>Reserved</Text>
+									</Ranges>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Direct Parameters 2</Name>
+								<ObjId>V_DirectParameters_2</ObjId>
+								<Index>0x1</Index>
+								<ByteLenth>16</ByteLenth>
+								<Items>
+									<Name>Device Specific Parameter 1</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>120</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 2</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>112</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 3</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>104</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 4</Name>
+									<Subindex>0x4</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>96</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 5</Name>
+									<Subindex>0x5</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>88</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 6</Name>
+									<Subindex>0x6</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>80</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 7</Name>
+									<Subindex>0x7</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>72</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 8</Name>
+									<Subindex>0x8</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>64</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 9</Name>
+									<Subindex>0x9</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>56</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 10</Name>
+									<Subindex>0xa</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>48</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 11</Name>
+									<Subindex>0xb</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>40</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 12</Name>
+									<Subindex>0xc</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>32</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 13</Name>
+									<Subindex>0xd</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>24</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 14</Name>
+									<Subindex>0xe</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>16</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 15</Name>
+									<Subindex>0xf</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>8</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Device Specific Parameter 16</Name>
+									<Subindex>0x10</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Vendor Name</Name>
+								<ObjId>V_VendorName</ObjId>
+								<Index>0x10</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Vendor Name</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value>SICK AG</Value>
+									<DefaultValue>SICK AG</DefaultValue>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Product Name</Name>
+								<ObjId>V_ProductName</ObjId>
+								<Index>0x12</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Product Name</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Standard Command</Name>
+								<ObjId>V_SystemCommand</ObjId>
+								<Index>0x2</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Standard Command</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>wo</Access>
+									<Description/>
+									<Enums>
+										<Value>0x82</Value>
+										<Text>Restore Factory Settings</Text>
+									</Enums>
+									<Enums>
+										<Value>0x43</Value>
+										<Text>2-Point Teach-in: Point 1 - Object</Text>
+									</Enums>
+									<Enums>
+										<Value>0x44</Value>
+										<Text>2-Point Teach-in: Point 2 - Background</Text>
+									</Enums>
+									<Enums>
+										<Value>0x47</Value>
+										<Text>Dynamic Teach-in: Start</Text>
+									</Enums>
+									<Enums>
+										<Value>0x48</Value>
+										<Text>Dynamic Teach-in: Stop</Text>
+									</Enums>
+									<Enums>
+										<Value>0x41</Value>
+										<Text>1-Point Teach-in</Text>
+									</Enums>
+									<Enums>
+										<Value>0x4f</Value>
+										<Text>Cancel Teach-in</Text>
+									</Enums>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>63</upperValue>
+										<Text>Reserved</Text>
+									</Ranges>
+									<Ranges>
+										<lowerValue>131</lowerValue>
+										<upperValue>159</upperValue>
+										<Text>Reserved</Text>
+									</Ranges>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Product ID</Name>
+								<ObjId>V_ProductID</ObjId>
+								<Index>0x13</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Product ID</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Serial Number</Name>
+								<ObjId>V_SerialNumber</ObjId>
+								<Index>0x15</Index>
+								<ByteLenth>16</ByteLenth>
+								<Items>
+									<Name>Serial Number</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>128</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Hardware Version</Name>
+								<ObjId>V_HardwareRevision</ObjId>
+								<Index>0x16</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Hardware Version</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Firmware Version</Name>
+								<ObjId>V_FirmwareRevision</ObjId>
+								<Index>0x17</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Firmware Version</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Application Specific Tag</Name>
+								<ObjId>V_ApplicationSpecificTag</ObjId>
+								<Index>0x18</Index>
+								<ByteLenth>32</ByteLenth>
+								<Items>
+									<Name>Application Specific Tag</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>256</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Q1 and Q2</Name>
+								<ObjId>V_ProcessDataInput</ObjId>
+								<Index>0x28</Index>
+								<ByteLenth>2</ByteLenth>
+								<Items>
+									<Name>BDC1/Q1</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro s</Access>
+									<Description/>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>switch closed</Text>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>switch open</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>BDC2/Q2</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>1</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro s</Access>
+									<Description/>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>switch closed</Text>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>switch open</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>not used</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>2</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro s</Access>
+									<Description/>
+									<Enums>
+										<Value>0x1</Value>
+										<Text/>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text/>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>Teach busy</Name>
+									<Subindex>0x4</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>3</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro s</Access>
+									<Description/>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Teach busy</Text>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Teach not busy</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Vendor Text</Name>
+								<ObjId>V_VendorText</ObjId>
+								<Index>0x11</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Vendor Text</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Device Status</Name>
+								<ObjId>V_DeviceStatus</ObjId>
+								<Index>0x24</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Device Status</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+									<Ranges>
+										<lowerValue>5</lowerValue>
+										<upperValue>255</upperValue>
+										<Text>Reserved</Text>
+									</Ranges>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Product Text</Name>
+								<ObjId>V_ProductText</ObjId>
+								<Index>0x14</Index>
+								<ByteLenth>64</ByteLenth>
+								<Items>
+									<Name>Product Text</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>512</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Device Access Locks</Name>
+								<ObjId>V_DeviceAccessLocks</ObjId>
+								<Index>0xc</Index>
+								<ByteLenth>2</ByteLenth>
+								<Items>
+									<Name>Parameter (write) Access Lock</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw s</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Data Storage Lock</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>1</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw s</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Local Parameterization Lock</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>2</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw s</Access>
+									<Description/>
+								</Items>
+								<Items>
+									<Name>Local User Interface Lock</Name>
+									<Subindex>0x4</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>3</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw s</Access>
+									<Description/>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Find Me</Name>
+								<ObjId>V_de78dcaa-9310-43b4-a109-3db8c31a006a</ObjId>
+								<Index>0xcc</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Find Me</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Find Me</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Inactive</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Active (LED blinks with 1 Hz, Q is low, no change in PD)</Text>
+									</Enums>
+									<Enums>
+										<Value>0x10</Value>
+										<Text>Active (LED blinks with 1 Hz, Q switches with 1 Hz, no change in PD)</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Key Lock</Name>
+								<ObjId>V_ControlElementLock</ObjId>
+								<Index>0x51</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Key Lock</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Key Lock</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Key unlock</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Key lock</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Job assurance</Name>
+								<ObjId>V_a380d3cd-de35-488d-8890-7eea4d5ac929</ObjId>
+								<Index>0xde</Index>
+								<ByteLenth>11</ByteLenth>
+								<Items>
+									<Name>Job assurance</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>OctetString</Datatype>
+									<Length>88</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description>All required information for job assurance are integrated.</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Quality of Teach-in</Name>
+								<ObjId>V_e2b7a89e-a08f-4649-839d-c1855b17948c</ObjId>
+								<Index>0x72</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Quality of Teach-in</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Quality of Teach-in in %</Description>
+									<Enums>
+										<Value>0xff</Value>
+										<Text>Invalid due to 1-Point Teach-in</Text>
+									</Enums>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>100</upperValue>
+										<Text>Quality of Teach-in in %</Text>
+									</Ranges>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Teach-in Channel</Name>
+								<ObjId>V_TeachInChannel</ObjId>
+								<Index>0x3a</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Teach-in Channel</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Default Setting (BDC1 / Q1)</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Switching Output (BDC1 / Q1)</Text>
+									</Enums>
+									<Enums>
+										<Value>0x2</Value>
+										<Text>Switching Output (BDC2 / Q2)</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Pin 2 Configuration</Name>
+								<ObjId>V_Pin2Configuration</ObjId>
+								<Index>0x79</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Pin 2 Configuration</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>17</Value>
+									<DefaultValue>17</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>deactivated</Text>
+									</Enums>
+									<Enums>
+										<Value>0x26</Value>
+										<Text>Switching Output Q1</Text>
+									</Enums>
+									<Enums>
+										<Value>0x22</Value>
+										<Text>Switching Output Q2</Text>
+									</Enums>
+									<Enums>
+										<Value>0x21</Value>
+										<Text>Quality of Run Alarm Output</Text>
+									</Enums>
+									<Enums>
+										<Value>0x11</Value>
+										<Text>External Teach Input</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Profile Characteristic</Name>
+								<ObjId>V_ProfileCharacteristics</ObjId>
+								<Index>0xd</Index>
+								<ByteLenth>14</ByteLenth>
+								<Items>
+									<Name>Smart Sensor Profile</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>96</BitOffset>
+									<Value>1</Value>
+									<DefaultValue>1</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>Identification</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>80</BitOffset>
+									<Value>32768</Value>
+									<DefaultValue>32768</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>BDC Binary Data Channel</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>64</BitOffset>
+									<Value>32769</Value>
+									<DefaultValue>32769</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>BDC Binary Data Channel</Name>
+									<Subindex>0x4</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>48</BitOffset>
+									<Value>32769</Value>
+									<DefaultValue>32769</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>PDV Process Data Variable</Name>
+									<Subindex>0x5</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>32</BitOffset>
+									<Value>32770</Value>
+									<DefaultValue>32770</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>Diagnosis</Name>
+									<Subindex>0x6</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>16</BitOffset>
+									<Value>32771</Value>
+									<DefaultValue>32771</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>Teach In</Name>
+									<Subindex>0x7</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>0</BitOffset>
+									<Value>32772</Value>
+									<DefaultValue>32772</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>PD Input Descriptor</Name>
+								<ObjId>V_PD_InputDescriptor</ObjId>
+								<Index>0xe</Index>
+								<ByteLenth>15</ByteLenth>
+								<Items>
+									<Name>1</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>OctetString</Datatype>
+									<Length>24</Length>
+									<BitOffset>96</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>2</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>OctetString</Datatype>
+									<Length>24</Length>
+									<BitOffset>72</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>3</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>OctetString</Datatype>
+									<Length>24</Length>
+									<BitOffset>48</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>4</Name>
+									<Subindex>0x4</Subindex>
+									<Datatype>OctetString</Datatype>
+									<Length>24</Length>
+									<BitOffset>24</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+								<Items>
+									<Name>5</Name>
+									<Subindex>0x5</Subindex>
+									<Datatype>OctetString</Datatype>
+									<Length>24</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Device Specific Name</Name>
+								<ObjId>V_DeviceSpecificTag</ObjId>
+								<Index>0x40</Index>
+								<ByteLenth>32</ByteLenth>
+								<Items>
+									<Name>Device Specific Name</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>256</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Sick Profile Version</Name>
+								<ObjId>V_SickProfileVersion</ObjId>
+								<Index>0xcd</Index>
+								<ByteLenth>4</ByteLenth>
+								<Items>
+									<Name>Sick Profile Version</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>String</Datatype>
+									<Length>32</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0.02</Value>
+									<DefaultValue>0.02</DefaultValue>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Teach-in Status</Name>
+								<ObjId>V_TeachInStatus</ObjId>
+								<Index>0x3b</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Teach-in Status</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Teach-in Channel</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Setpoint (BDC1 / Q1)</Name>
+								<ObjId>V_SetpointBDC1</ObjId>
+								<Index>0x3c</Index>
+								<ByteLenth>2</ByteLenth>
+								<Items>
+									<Name>Setpoint SP1 % between fork open and fork totally blocked</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>8</BitOffset>
+									<Value>50</Value>
+									<DefaultValue>50</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>100</upperValue>
+										<Text>threshold in % between fork open and fork totally blocked</Text>
+									</Ranges>
+								</Items>
+								<Items>
+									<Name>Setpoint SP2 not used</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text/>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Setpoint (BDC2 / Q2)</Name>
+								<ObjId>V_SetpointBDC2</ObjId>
+								<Index>0x3e</Index>
+								<ByteLenth>2</ByteLenth>
+								<Items>
+									<Name>Setpoint SP1 % between fork open and fork totally blocked</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>8</BitOffset>
+									<Value>50</Value>
+									<DefaultValue>50</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>100</upperValue>
+										<Text>threshold in % between fork open and fork totally blocked</Text>
+									</Ranges>
+								</Items>
+								<Items>
+									<Name>Setpoint SP2 not used</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text/>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Switchpoint (BDC1 / Q1)</Name>
+								<ObjId>V_SwitchpointBDC1</ObjId>
+								<Index>0x3d</Index>
+								<ByteLenth>4</ByteLenth>
+								<Items>
+									<Name>Switchpoint Logic</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>24</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>not inverted value (dark switching)</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>inverted value (light switching)</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>Switchpoint Mode</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>16</BitOffset>
+									<Value>1</Value>
+									<DefaultValue>1</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Deactivated</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Single Point Mode</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>Switchpoint Hysteresis</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>vendor specific default</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Switchpoint (BDC2 / Q2)</Name>
+								<ObjId>V_SwitchpointBDC2</ObjId>
+								<Index>0x3f</Index>
+								<ByteLenth>4</ByteLenth>
+								<Items>
+									<Name>Switchpoint Logic</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>24</BitOffset>
+									<Value>1</Value>
+									<DefaultValue>1</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>not inverted value (dark switching)</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>inverted value (light switching)</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>Switchpoint Mode</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>16</BitOffset>
+									<Value>1</Value>
+									<DefaultValue>1</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Deactivated</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Single Point Mode</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>Switchpoint Hysteresis</Name>
+									<Subindex>0x3</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>vendor specific default</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Time 1 setup</Name>
+								<ObjId>V_DelayTimeQ1</ObjId>
+								<Index>0x43f</Index>
+								<ByteLenth>2</ByteLenth>
+								<Items>
+									<Name>Time 1 setup</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Teach-in Channel</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>0 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x8</Value>
+										<Text>8 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x10</Value>
+										<Text>16 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x20</Value>
+										<Text>32 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x41</Value>
+										<Text>65 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x82</Value>
+										<Text>130 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x104</Value>
+										<Text>260 ms</Text>
+									</Enums>
+									<Enums>
+										<Value>0x208</Value>
+										<Text>520 ms</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Quality of Run</Name>
+								<ObjId>V_0f064658-27f9-4236-82c6-755149d2552d</ObjId>
+								<Index>0xaf</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Quality of Run</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Quality of Run in %</Description>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>100</upperValue>
+										<Text>Quality of Run in %</Text>
+									</Ranges>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Threshold Quality of Run Alarm</Name>
+								<ObjId>V_f66346f3-cc24-4f8d-97c9-f78c41e1e3c9</ObjId>
+								<Index>0xb0</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Threshold Quality of Run Alarm</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>rw</Access>
+									<Description>Threshold Quality of Run Alarm</Description>
+									<Ranges>
+										<lowerValue>0</lowerValue>
+										<upperValue>100</upperValue>
+										<Text>Threshold Quality of Run Alarm</Text>
+									</Ranges>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Process Data Select</Name>
+								<ObjId>V_ProcessDataSelect</ObjId>
+								<Index>0x78</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Process Data Select</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Process Data Select</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Q1 and Q2</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Q1 and Quality of Run Alarm</Text>
+									</Enums>
+									<Enums>
+										<Value>0x10</Value>
+										<Text>Measurement Value, Q1 and Q2</Text>
+									</Enums>
+									<Enums>
+										<Value>0x11</Value>
+										<Text>Measurement Value, Q1 and Quality of Run Alarm</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Timer 1 mode</Name>
+								<ObjId>V_DelayModeQ1</ObjId>
+								<Index>0x43d</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Timer 1 mode</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Process Data Select</Description>
+									<Enums>
+										<Value>0x2</Value>
+										<Text>T-off delay</Text>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>deactivated</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>System state</Name>
+								<ObjId>V_a78604a0-9d68-4448-9930-ac94371e60cd</ObjId>
+								<Index>0xe2</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Detection output Q.int</Name>
+									<Subindex>0x1</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro s</Access>
+									<Description>Process Data Select</Description>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Object detected</Text>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>No object detected</Text>
+									</Enums>
+								</Items>
+								<Items>
+									<Name>Quality of run alarm output</Name>
+									<Subindex>0x2</Subindex>
+									<Datatype>BOOL</Datatype>
+									<Length>1</Length>
+									<BitOffset>1</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro s</Access>
+									<Description>Process Data Select</Description>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Alarm active</Text>
+									</Enums>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Alarm not active</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Sender off</Name>
+								<ObjId>V_417427ba-2681-4ee3-b3d7-63e31d231875</ObjId>
+								<Index>0x61</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Sender off</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Sender active</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>Sender not active</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Timer 2 mode</Name>
+								<ObjId>V_494d667a-db3d-44a1-aed1-f9205f4870c9</ObjId>
+								<Index>0x43e</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Timer 2 mode</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>deactivated</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Time 2 setup</Name>
+								<ObjId>V_0bf82485-8615-47b1-816b-028e53d9667e</ObjId>
+								<Index>0x440</Index>
+								<ByteLenth>2</ByteLenth>
+								<Items>
+									<Name>Time 2 setup</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT16</Datatype>
+									<Length>16</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>0 ms</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>AFC Selector</Name>
+								<ObjId>V_51880a99-70c1-4b05-8206-97877d932402</ObjId>
+								<Index>0xfa0</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>AFC Selector</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>A00 Selector Logic Timer Inverter</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>SLTI version</Name>
+								<ObjId>V_89802f00-78da-4731-8545-ce1dfcb52b23</ObjId>
+								<Index>0x438</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>SLTI version</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value/>
+									<DefaultValue/>
+									<Access>ro</Access>
+									<Description>Sender configuration</Description>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Input selector 1</Name>
+								<ObjId>V_91d82eab-ae39-40e4-8990-615f5bed7d68</ObjId>
+								<Index>0x439</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Input selector 1</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>Q.int 1</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Input selector 2</Name>
+								<ObjId>V_a937bdd8-f183-4ea3-897d-8e8cf7e5eb4a</ObjId>
+								<Index>0x43a</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Input selector 2</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>3</Value>
+									<DefaultValue>3</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x3</Value>
+										<Text>Q.int 2</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Logic 1</Name>
+								<ObjId>V_73afbff6-e9ed-4e90-8351-46ae1e7472c9</ObjId>
+								<Index>0x43b</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Logic 1</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>direct</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Logic 2</Name>
+								<ObjId>V_a579396f-0e26-4d7e-ad8c-0dbd6a400589</ObjId>
+								<Index>0x43c</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Logic 2</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>direct</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Inverter 1</Name>
+								<ObjId>V_c73ad1ef-9dd0-4824-87d8-dde660fb80ec</ObjId>
+								<Index>0x441</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Inverter 1</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>not inverted</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>inverted</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Parameter>
+								<Name>Inverter 2</Name>
+								<ObjId>V_4efd1b3f-20fe-4460-b1a3-ebc5b7f848a9</ObjId>
+								<Index>0x442</Index>
+								<ByteLenth>1</ByteLenth>
+								<Items>
+									<Name>Inverter 2</Name>
+									<Subindex>0x0</Subindex>
+									<Datatype>UINT8</Datatype>
+									<Length>8</Length>
+									<BitOffset>0</BitOffset>
+									<Value>0</Value>
+									<DefaultValue>0</DefaultValue>
+									<Access>rw</Access>
+									<Description>Sender configuration</Description>
+									<Enums>
+										<Value>0x0</Value>
+										<Text>not inverted</Text>
+									</Enums>
+									<Enums>
+										<Value>0x1</Value>
+										<Text>inverted</Text>
+									</Enums>
+								</Items>
+							</Parameter>
+							<Event>
+								<code>0x1800</code>
+								<type>0x1</type>
+								<name>Teach Error</name>
+								<desc>Teach Error occured</desc>
+							</Event>
+							<Event>
+								<code>0x1801</code>
+								<type>0x0</type>
+								<name>Teach successfull</name>
+								<desc>Teach successfull</desc>
+							</Event>
+							<Event>
+								<code>0x8ca4</code>
+								<type>0x0</type>
+								<name>Quality of Run Alarm</name>
+								<desc>Quality of Run Alarm</desc>
+							</Event>
+							<Event>
+								<code>0x1804</code>
+								<type>0x0</type>
+								<name>Set Process Data Select to 0</name>
+								<desc>Set Process Data Select to 0 - BDC2 active</desc>
+							</Event>
+							<Event>
+								<code>0x1805</code>
+								<type>0x0</type>
+								<name>Set Process Data Select to 1</name>
+								<desc>Set Process Data Select to 1 - QoRA active</desc>
+							</Event>
+							<UserInterface2>
+								<Observer>
+									<Menu>
+										<Id>ME_IdentificationMenu</Id>
+										<Name>Identification Menu</Name>
+										<ConditionObjId/>
+										<ConditionSubindex>0x0</ConditionSubindex>
+										<ConditionValue>0x0</ConditionValue>
+										<Variable>
+											<ObjectId>V_VendorName</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_VendorText</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductName</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductID</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductText</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_SerialNumber</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_HardwareRevision</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_FirmwareRevision</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ApplicationSpecificTag</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_DeviceSpecificTag</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_de78dcaa-9310-43b4-a109-3db8c31a006a</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+									</Menu>
+									<Menu>
+										<Id>ME_ParameterMenu</Id>
+										<Name>Parameter Menu</Name>
+										<ConditionObjId/>
+										<ConditionSubindex>0x0</ConditionSubindex>
+										<ConditionValue>0x0</ConditionValue>
+										<Menu>
+											<Id>ME_Settings</Id>
+											<Name>Settings</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Menu>
+												<Id>ME_DeviceSettings</Id>
+												<Name>Device Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>130</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_ProcessDataSelect</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_Pin2Configuration</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_DeviceAccessLocks</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_ControlElementLock</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_0f064658-27f9-4236-82c6-755149d2552d</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_f66346f3-cc24-4f8d-97c9-f78c41e1e3c9</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_417427ba-2681-4ee3-b3d7-63e31d231875</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Q1Settings</Id>
+												<Name>Q1 Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SetpointBDC1</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SwitchpointBDC1</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Q2Settings</Id>
+												<Name>Q2 Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SetpointBDC2</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SwitchpointBDC2</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+										</Menu>
+										<Menu>
+											<Id>ME_Teach</Id>
+											<Name>Teach</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Variable>
+												<ObjectId>V_TeachInChannel</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_TeachInStatus</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_SystemCommand</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access>wo</Access>
+												<DisplayFormat>Button</DisplayFormat>
+												<ButtonValue>79</ButtonValue>
+											</Variable>
+											<Variable>
+												<ObjectId>V_e2b7a89e-a08f-4649-839d-c1855b17948c</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Menu>
+												<Id>ME_Static1PointTeach</Id>
+												<Name>Static 1-Point-Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>65</ButtonValue>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Static2PointTeach</Id>
+												<Name>Static 2-Point-Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>67</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>68</ButtonValue>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_DynamicTeach</Id>
+												<Name>Dynamic Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>71</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>72</ButtonValue>
+												</Variable>
+											</Menu>
+										</Menu>
+										<Menu>
+											<Id>ME_0675e900-88b0-4b68-b9e0-d54ec784d034</Id>
+											<Name>Automation Function</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Variable>
+												<ObjectId>V_51880a99-70c1-4b05-8206-97877d932402</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_89802f00-78da-4731-8545-ce1dfcb52b23</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_91d82eab-ae39-40e4-8990-615f5bed7d68</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_a937bdd8-f183-4ea3-897d-8e8cf7e5eb4a</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_73afbff6-e9ed-4e90-8351-46ae1e7472c9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_a579396f-0e26-4d7e-ad8c-0dbd6a400589</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_DelayModeQ1</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_494d667a-db3d-44a1-aed1-f9205f4870c9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_DelayTimeQ1</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_0bf82485-8615-47b1-816b-028e53d9667e</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_c73ad1ef-9dd0-4824-87d8-dde660fb80ec</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_4efd1b3f-20fe-4460-b1a3-ebc5b7f848a9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+										</Menu>
+									</Menu>
+								</Observer>
+								<Maintenance>
+									<Menu>
+										<Id>ME_IdentificationMenu</Id>
+										<Name>Identification Menu</Name>
+										<ConditionObjId/>
+										<ConditionSubindex>0x0</ConditionSubindex>
+										<ConditionValue>0x0</ConditionValue>
+										<Variable>
+											<ObjectId>V_VendorName</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_VendorText</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductName</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductID</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductText</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_SerialNumber</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_HardwareRevision</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_FirmwareRevision</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ApplicationSpecificTag</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_DeviceSpecificTag</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_de78dcaa-9310-43b4-a109-3db8c31a006a</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+									</Menu>
+									<Menu>
+										<Id>ME_ParameterMenu</Id>
+										<Name>Parameter Menu</Name>
+										<ConditionObjId/>
+										<ConditionSubindex>0x0</ConditionSubindex>
+										<ConditionValue>0x0</ConditionValue>
+										<Menu>
+											<Id>ME_Settings</Id>
+											<Name>Settings</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Menu>
+												<Id>ME_DeviceSettings</Id>
+												<Name>Device Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>130</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_ProcessDataSelect</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_Pin2Configuration</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_DeviceAccessLocks</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_ControlElementLock</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_0f064658-27f9-4236-82c6-755149d2552d</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_f66346f3-cc24-4f8d-97c9-f78c41e1e3c9</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_417427ba-2681-4ee3-b3d7-63e31d231875</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Q1Settings</Id>
+												<Name>Q1 Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SetpointBDC1</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SwitchpointBDC1</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Q2Settings</Id>
+												<Name>Q2 Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SetpointBDC2</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SwitchpointBDC2</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+										</Menu>
+										<Menu>
+											<Id>ME_Teach</Id>
+											<Name>Teach</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Variable>
+												<ObjectId>V_TeachInChannel</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_TeachInStatus</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_SystemCommand</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access>wo</Access>
+												<DisplayFormat>Button</DisplayFormat>
+												<ButtonValue>79</ButtonValue>
+											</Variable>
+											<Variable>
+												<ObjectId>V_e2b7a89e-a08f-4649-839d-c1855b17948c</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Menu>
+												<Id>ME_Static1PointTeach</Id>
+												<Name>Static 1-Point-Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>65</ButtonValue>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Static2PointTeach</Id>
+												<Name>Static 2-Point-Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>67</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>68</ButtonValue>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_DynamicTeach</Id>
+												<Name>Dynamic Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>71</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>72</ButtonValue>
+												</Variable>
+											</Menu>
+										</Menu>
+										<Menu>
+											<Id>ME_0675e900-88b0-4b68-b9e0-d54ec784d034</Id>
+											<Name>Automation Function</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Variable>
+												<ObjectId>V_51880a99-70c1-4b05-8206-97877d932402</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_89802f00-78da-4731-8545-ce1dfcb52b23</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_91d82eab-ae39-40e4-8990-615f5bed7d68</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_a937bdd8-f183-4ea3-897d-8e8cf7e5eb4a</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_73afbff6-e9ed-4e90-8351-46ae1e7472c9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_a579396f-0e26-4d7e-ad8c-0dbd6a400589</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_DelayModeQ1</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_494d667a-db3d-44a1-aed1-f9205f4870c9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_DelayTimeQ1</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_0bf82485-8615-47b1-816b-028e53d9667e</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_c73ad1ef-9dd0-4824-87d8-dde660fb80ec</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_4efd1b3f-20fe-4460-b1a3-ebc5b7f848a9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+										</Menu>
+									</Menu>
+								</Maintenance>
+								<Specialist>
+									<Menu>
+										<Id>ME_IdentificationMenu</Id>
+										<Name>Identification Menu</Name>
+										<ConditionObjId/>
+										<ConditionSubindex>0x0</ConditionSubindex>
+										<ConditionValue>0x0</ConditionValue>
+										<Variable>
+											<ObjectId>V_VendorName</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_VendorText</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductName</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductID</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ProductText</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_SerialNumber</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_HardwareRevision</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_FirmwareRevision</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_ApplicationSpecificTag</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_DeviceSpecificTag</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+										<Variable>
+											<ObjectId>V_de78dcaa-9310-43b4-a109-3db8c31a006a</ObjectId>
+											<Subindex>0</Subindex>
+											<Gradient>0.000000</Gradient>
+											<Offset>0.000000</Offset>
+											<Unit/>
+											<Access/>
+											<DisplayFormat/>
+											<ButtonValue/>
+										</Variable>
+									</Menu>
+									<Menu>
+										<Id>ME_ParameterMenu</Id>
+										<Name>Parameter Menu</Name>
+										<ConditionObjId/>
+										<ConditionSubindex>0x0</ConditionSubindex>
+										<ConditionValue>0x0</ConditionValue>
+										<Menu>
+											<Id>ME_Settings</Id>
+											<Name>Settings</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Menu>
+												<Id>ME_DeviceSettings</Id>
+												<Name>Device Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>130</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_ProcessDataSelect</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_Pin2Configuration</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_DeviceAccessLocks</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_ControlElementLock</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_0f064658-27f9-4236-82c6-755149d2552d</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_f66346f3-cc24-4f8d-97c9-f78c41e1e3c9</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_417427ba-2681-4ee3-b3d7-63e31d231875</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Q1Settings</Id>
+												<Name>Q1 Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SetpointBDC1</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SwitchpointBDC1</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Q2Settings</Id>
+												<Name>Q2 Settings</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SetpointBDC2</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SwitchpointBDC2</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access/>
+													<DisplayFormat/>
+													<ButtonValue/>
+												</Variable>
+											</Menu>
+										</Menu>
+										<Menu>
+											<Id>ME_Teach</Id>
+											<Name>Teach</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Variable>
+												<ObjectId>V_TeachInChannel</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_TeachInStatus</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_SystemCommand</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access>wo</Access>
+												<DisplayFormat>Button</DisplayFormat>
+												<ButtonValue>79</ButtonValue>
+											</Variable>
+											<Variable>
+												<ObjectId>V_e2b7a89e-a08f-4649-839d-c1855b17948c</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Menu>
+												<Id>ME_Static1PointTeach</Id>
+												<Name>Static 1-Point-Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>65</ButtonValue>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_Static2PointTeach</Id>
+												<Name>Static 2-Point-Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>67</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>68</ButtonValue>
+												</Variable>
+											</Menu>
+											<Menu>
+												<Id>ME_DynamicTeach</Id>
+												<Name>Dynamic Teach</Name>
+												<ConditionObjId/>
+												<ConditionSubindex>0x0</ConditionSubindex>
+												<ConditionValue>0x0</ConditionValue>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>71</ButtonValue>
+												</Variable>
+												<Variable>
+													<ObjectId>V_SystemCommand</ObjectId>
+													<Subindex>0</Subindex>
+													<Gradient>0.000000</Gradient>
+													<Offset>0.000000</Offset>
+													<Unit/>
+													<Access>wo</Access>
+													<DisplayFormat>Button</DisplayFormat>
+													<ButtonValue>72</ButtonValue>
+												</Variable>
+											</Menu>
+										</Menu>
+										<Menu>
+											<Id>ME_0675e900-88b0-4b68-b9e0-d54ec784d034</Id>
+											<Name>Automation Function</Name>
+											<ConditionObjId/>
+											<ConditionSubindex>0x0</ConditionSubindex>
+											<ConditionValue>0x0</ConditionValue>
+											<Variable>
+												<ObjectId>V_51880a99-70c1-4b05-8206-97877d932402</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_89802f00-78da-4731-8545-ce1dfcb52b23</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_91d82eab-ae39-40e4-8990-615f5bed7d68</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_a937bdd8-f183-4ea3-897d-8e8cf7e5eb4a</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_73afbff6-e9ed-4e90-8351-46ae1e7472c9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_a579396f-0e26-4d7e-ad8c-0dbd6a400589</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_DelayModeQ1</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_494d667a-db3d-44a1-aed1-f9205f4870c9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_DelayTimeQ1</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_0bf82485-8615-47b1-816b-028e53d9667e</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_c73ad1ef-9dd0-4824-87d8-dde660fb80ec</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+											<Variable>
+												<ObjectId>V_4efd1b3f-20fe-4460-b1a3-ebc5b7f848a9</ObjectId>
+												<Subindex>0</Subindex>
+												<Gradient>0.000000</Gradient>
+												<Offset>0.000000</Offset>
+												<Unit/>
+												<Access/>
+												<DisplayFormat/>
+												<ButtonValue/>
+											</Variable>
+										</Menu>
+									</Menu>
+								</Specialist>
+							</UserInterface2>
+							<PdIn>
+								<Name>BDC1/Q1</Name>
+								<BitLen>0x1</BitLen>
+								<BitOffs>0x0</BitOffs>
+								<Datatype>BOOL</Datatype>
+							</PdIn>
+							<PdIn>
+								<Name>BDC2/Q2</Name>
+								<BitLen>0x1</BitLen>
+								<BitOffs>0x1</BitOffs>
+								<Datatype>BOOL</Datatype>
+							</PdIn>
+							<PdIn>
+								<Name>not used</Name>
+								<BitLen>0x1</BitLen>
+								<BitOffs>0x2</BitOffs>
+								<Datatype>BOOL</Datatype>
+							</PdIn>
+							<PdIn>
+								<Name>Teach busy</Name>
+								<BitLen>0x1</BitLen>
+								<BitOffs>0x3</BitOffs>
+								<Datatype>BOOL</Datatype>
+							</PdIn>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+						<Port>
+							<FileName/>
+							<VendorName/>
+							<VendorLogo/>
+							<DeviceName/>
+							<DeviceIcon/>
+							<DeviceSymbol/>
+							<DeviceFamilyName/>
+							<DeviceText/>
+							<Flags>0x00000000</Flags>
+							<Features>0x00000000</Features>
+							<DirectParameter>0000000000000000000000000000000000000000</DirectParameter>
+							<UserInterface2>
+								<Observer/>
+								<Maintenance/>
+								<Specialist/>
+							</UserInterface2>
+						</Port>
+					</Xml>
+					<EtherCAT SlaveType="3" AdsServerAddress="0a193c390303ea03" PdiType="#x0c80" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" FoeType="1" VendorId="#x00000002" ProductCode="#x64774b49" RevisionNo="#x00100016" InfoDataAddr="true" InfoDataNetId="true" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" CheckRevisionNoType="3" PortPhys="17" MaxSlotCount="11" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP6228 (IO Link Master)" Desc="EPP6228-0022" PortABoxInfo="#x02000001">
+						<SyncMan>001000012600010001000000400000010001001026010000</SyncMan>
+						<SyncMan>001100012200010002000000400000010001001122010000</SyncMan>
+						<SyncMan>001200002400000003000000000000000000001224000000</SyncMan>
+						<SyncMan>00190e002000010004000000000000000c00001920010000</SyncMan>
+						<Fmmu>0000000000000000000000020000000001000000000000000000000000000000</Fmmu>
+						<Fmmu>0000000000000000001900010100000002000000000000000000000000000000</Fmmu>
+						<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+						<BootStrapData>0010f400f410f400</BootStrapData>
+						<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+						<DcMode>44434c415443480000000000000000004443204c61746368204163746976650000000000000000000000000000000000000000000000000000000000000030010000000000000000000000000000000000000000000000000000000000000000</DcMode>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba46090000000000000000000000003000800114000000ae0080001a0000001101170050000000000023004f626a656374203830303000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000301080011400000000000000000000000000000000000000000000004f626a656374203830313000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000302080011400000000000000000000000000000000000000000000004f626a656374203830323000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000303080011400000000000000000000000000000000000000000000004f626a656374203830333000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000304080011400000000000000000000000000000000000000000000004f626a656374203830343000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000305080011400000000000000000000000000000000000000000000004f626a656374203830353000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000306080011400000000000000000000000000000000000000000000004f626a656374203830363000</MBoxUserCmdData>
+						<MBoxUserCmdData>020003001c0000000b00000000000000f0ba4609000000000000000000000000307080011400000000000000000000000000000000000000000000004f626a656374203830373000</MBoxUserCmdData>
+						<Pdo Name="DeviceState Inputs Device" Index="#x1a81" Flags="#x0090" SyncMan="3">
+							<Entry BitLen="8">
+								<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+							</Entry>
+							<Entry BitLen="4">
+								<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+							</Entry>
+							<Entry Name="Device Diag" BitLen="1" Index="#xf101" Sub="#x0d">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry BitLen="2">
+								<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+							</Entry>
+							<Entry Name="Device State" BitLen="1" Index="#xf101" Sub="#x10">
+								<Type>BIT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="DeviceState Inputs" Index="#x1a80" Flags="#x0090" SyncMan="3">
+							<Entry Name="State Ch1" BitLen="8" Index="#xf100" Sub="#x01">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch2" BitLen="8" Index="#xf100" Sub="#x02">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch3" BitLen="8" Index="#xf100" Sub="#x03">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch4" BitLen="8" Index="#xf100" Sub="#x04">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch5" BitLen="8" Index="#xf100" Sub="#x05">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch6" BitLen="8" Index="#xf100" Sub="#x06">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch7" BitLen="8" Index="#xf100" Sub="#x07">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+							<Entry Name="State Ch8" BitLen="8" Index="#xf100" Sub="#x08">
+								<Type>USINT</Type>
+								<Comment>
+									<![CDATA[0x_0 = Port disabled
+0x_1 = Port in std dig in
+0x_2 = Port in std dig out
+0x_3 = Port in communikation OP
+0x_4 = Port in communikation COMSTOP
+0x1_ = Watchdog detected
+0x2_ = internal Error
+0x3_ = invalid Device ID
+0x4_ = invalid Vendor ID
+0x5_ = invalid IO-Link Version
+0x6_ = invalid Frame Capability
+0x7_ = invalid Cycle Time
+0x8_ = invalid PD in length
+0x9_ = invalid PD out length
+0xA_ = no Device detected
+0xB_ = error Preoperate]]>
+								</Comment>
+							</Entry>
+						</Pdo>
+						<Pdo Name="IO-Link Port1" Index="#x1a00" Flags="#x0080" SyncMan="3">
+							<Entry BitLen="8">
+								<Type>BYTE</Type>
+							</Entry>
+							<Entry Name="BDC1/Q1" BitLen="1" Index="#x6000" Sub="#x01">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="BDC2/Q2" BitLen="1" Index="#x6000" Sub="#x02">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="not used" BitLen="1" Index="#x6000" Sub="#x03">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Teach busy" BitLen="1" Index="#x6000" Sub="#x04">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry BitLen="4">
+								<Type>BIT4</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="Digital Inputs" Index="#x1a20" Flags="#x0090" SyncMan="3">
+							<Entry Name="Pin2 Ch1" BitLen="1" Index="#xf102" Sub="#x01">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch2" BitLen="1" Index="#xf102" Sub="#x02">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch3" BitLen="1" Index="#xf102" Sub="#x03">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch4" BitLen="1" Index="#xf102" Sub="#x04">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch5" BitLen="1" Index="#xf102" Sub="#x05">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch6" BitLen="1" Index="#xf102" Sub="#x06">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch7" BitLen="1" Index="#xf102" Sub="#x07">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry Name="Pin2 Ch8" BitLen="1" Index="#xf102" Sub="#x08">
+								<Type>BIT</Type>
+							</Entry>
+							<Entry BitLen="8">
+								<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+							</Entry>
+						</Pdo>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<CoeProfile ProfileNo="407638921"/>
+						<EtherCATp>
+							<Device>
+								<Us DevCurrent="0.08">
+									<Load Name="IO-Link Supply"/>
+								</Us>
+								<Up DevCurrent="0.012"/>
+							</Device>
+							<Port>
+								<Us Resistance="0.108"/>
+								<Up Resistance="0.108"/>
+							</Port>
+							<Port>
+								<Us Resistance="0.108"/>
+								<Up Resistance="0.108"/>
+							</Port>
+						</EtherCATp>
+						<Slot Name="DeviceState Inputs Device" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>257</ModuleIdent>
+							<Module Id="#x03090001" Type="DeviceState Inputs Device" Class="">
+								<Name>Module 1 (DeviceState Inputs Device)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>0200000001010000000000000000000000000000000000000000000000000000</ModuleData>
+								<PdoIndex>6785</PdoIndex>
+							</Module>
+						</Slot>
+						<Slot Name="DeviceState Inputs" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>258</ModuleIdent>
+							<Module Id="#x03090002" Type="DeviceState Inputs" Class="">
+								<Name>Module 2 (DeviceState Inputs)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>0200000002010000000000000000000000000000000000000000000000000000</ModuleData>
+								<PdoIndex>6784</PdoIndex>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090003" Type="IO-Link Slave" Class="">
+								<Name>Module 3 (IO-Link Slave)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000ffffffff000000000000000000000000000000000000000000000000</ModuleData>
+								<PdoIndex>6656</PdoIndex>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090004" Type="empty" Class="">
+								<Name>Module 4 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090005" Type="empty" Class="">
+								<Name>Module 5 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090006" Type="empty" Class="">
+								<Name>Module 6 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090007" Type="empty" Class="">
+								<Name>Module 7 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090008" Type="empty" Class="">
+								<Name>Module 8 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x03090009" Type="empty" Class="">
+								<Name>Module 9 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="IO-Link Channel" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>-2</ModuleIdent>
+							<ModuleIdent>-1</ModuleIdent>
+							<ModuleIdent>1050624</ModuleIdent>
+							<ModuleIdent>1050625</ModuleIdent>
+							<ModuleIdent>1050626</ModuleIdent>
+							<ModuleIdent>1050627</ModuleIdent>
+							<ModuleIdent>1575168</ModuleIdent>
+							<ModuleIdent>1575169</ModuleIdent>
+							<ModuleIdent>1575170</ModuleIdent>
+							<ModuleIdent>1575171</ModuleIdent>
+							<ModuleIdent>2099200</ModuleIdent>
+							<ModuleIdent>2099201</ModuleIdent>
+							<ModuleIdent>2099202</ModuleIdent>
+							<ModuleIdent>2099203</ModuleIdent>
+							<ModuleIdent>2623744</ModuleIdent>
+							<ModuleIdent>2623745</ModuleIdent>
+							<ModuleIdent>2623746</ModuleIdent>
+							<ModuleIdent>2623747</ModuleIdent>
+							<ModuleIdent>2308096</ModuleIdent>
+							<ModuleIdent>2308097</ModuleIdent>
+							<ModuleIdent>2308098</ModuleIdent>
+							<ModuleIdent>2308099</ModuleIdent>
+							<ModuleIdent>2308352</ModuleIdent>
+							<ModuleIdent>2308353</ModuleIdent>
+							<ModuleIdent>2308354</ModuleIdent>
+							<ModuleIdent>2308355</ModuleIdent>
+							<Module Id="#x0309000a" Type="empty" Class="">
+								<Name>Module 10 (empty)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>02000000feffffff000000000000000000000000000000000000000000000000</ModuleData>
+							</Module>
+						</Slot>
+						<Slot Name="Digital Inputs" ImageId="1002">
+							<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+							<ModuleIdent>272</ModuleIdent>
+							<Module Id="#x0309000b" Type="Digital Inputs" Class="">
+								<Name>Module 11 (Digital Inputs)</Name>
+								<ImageId>1002</ImageId>
+								<ModuleData>0200000010010000000000000000000000000000000000000000000000000000</ModuleData>
+								<PdoIndex>6688</PdoIndex>
+							</Module>
+						</Slot>
+					</EtherCAT>
+				</Box>
+				<EtherCAT DeviceDesc="ETHERCAT (X110) (TwinCAT-Intel PCI Ethernet Adapter"/>
+			</Device>
+		</Io>
+	</Project>
+	<Mappings>
+		<OwnerA Name="TIPC^PLC1^PLC1 Instance">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)">
+				<Link VarA="PlcTask Inputs^MAIN.startdata" VarB="Inputs^Frm0State"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>

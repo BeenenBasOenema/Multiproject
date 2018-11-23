@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.12">
+  <POU Name="MAIN" Id="{59ebf7a5-a622-4e8e-b8cd-d8e3d4cc7dfa}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR		
+	startdata 				AT %I* : UINT;	
+
+	fbDemoAcyclic :			FB_SICK_WF_A70_EC;
+	fbDemoProcesData :		FB_SICK_WF_A70_PB;
+	structSick : 			ST_SICK_WF_A70;
+	
+	risingEdgeSignalRead : 		R_TRIG;
+	risingEdgeSignalWrite :		R_TRIG;
+	
+	//Start read request
+	xStartRead :			BOOL;
+	
+	//Start write request
+	xStartWrite : 			BOOL;
+	
+	//Request done
+	xDone :					BOOL;
+	
+END_VAR
+
+    ]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+risingEdgeSignalRead(CLK := xStartRead);
+risingEdgeSignalWrite(CLK := xStartWrite);
+
+
+structSick.Selection.AutoDeSelect := TRUE;
+
+IF risingEdgeSignalRead.Q AND NOT fbDemoAcyclic.Busy THEN
+	xDone := FALSE;
+	structSick.Selection.ProductID := TRUE;
+	structSick.Selection.VendorName := TRUE;
+	structSick.Selection.ProductName := TRUE;
+	structSick.Selection.KeyLock := TRUE;
+	structSick.Selection.SwitchpointBDC1Q1.All := TRUE;
+	
+	fbDemoAcyclic.RW := FALSE; //Read
+	fbDemoAcyclic.Req := TRUE; //Start job
+	
+	(*Parameter write*)
+ELSIF risingEdgeSignalWrite.Q AND NOT fbDemoAcyclic.Busy THEN
+	// Init status
+	xDone:= FALSE;
+
+	// Parameter selection that should be written
+	structSick.Selection.KeyLock:= TRUE;
+	
+	
+	// Definition of the data that should be written 
+	structSick.Data.KeyLock:= eKeylock;
+
+	
+	fbDemoAcyclic.RW:= TRUE; // Write
+	fbDemoAcyclic.Req:= TRUE; // Start job
+END_IF;
+	
+
+fbDemoAcyclic(
+	NetID:= '10.25.60.57.3.3', 
+	PortNumber:= 1, 
+	TimeOut:= T#5S, 
+	Done=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorCode=> , 
+	MasterType:= eBECKHOFF_6224, 
+	SlaveAddr:= 0, 
+	Req:= , 
+	RW:= TRUE, 
+	DeviceData:= structSick);
+	
+	fbDemoAcyclic.Req := FALSE;
+	
+	IF fbDemoAcyclic.Done THEN
+		xDone := TRUE;
+	END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="38" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="40" Count="2" />
+      <LineId Id="44" Count="1" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="50" Count="5" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="61" Count="5" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="68" Count="7" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="12" Count="11" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="78" Count="5" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
